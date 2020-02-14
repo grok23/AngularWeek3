@@ -16,6 +16,7 @@ export class AddMovieComponent implements OnInit {
 
   addNewMovie(movietitle:HTMLInputElement, moviedirector:HTMLInputElement, movieyear:HTMLInputElement):boolean{
     this.movieService.addMovie(movietitle.value, moviedirector.value, movieyear.value);
+    movietitle.value=''; moviedirector.value=''; movieyear.value='';
     return false;
   }
 }
