@@ -6,9 +6,10 @@ import { MovieService } from '../movie.service';
   templateUrl: './add-movie.component.html',
   styleUrls: ['./add-movie.component.css']
 })
+
 export class AddMovieComponent implements OnInit {
   ngOnInit(): void {
-    throw new Error("Method not implemented.");
+    //throw new Error("Method not implemented.");
   }
 
   constructor(private movieService: MovieService) { }

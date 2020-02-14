@@ -12,6 +12,9 @@ export class MovieService {
     {title: 'Millers Crossing', year: '1990', director: 'The Coen Brothers'},
     {title: 'Dial M for Murder', year: '1954', director: 'Alfred Hitchcock'},
     {title: 'Whiplash', year: '2014', director: 'Damien Chazelle'},
+    {title: 'The Shape of Water', year: '2017', director: 'Guillermo del Toro'},
+    {title: 'Parasite', year: '2019', director: 'Bong Joon-Ho'},
+    {title: 'Jojo Rabbit', year: '2019', director: 'Taika Waititi'},
   ];
 
   getMovies() {
