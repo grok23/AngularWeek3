@@ -1,26 +1,29 @@
 import { Injectable } from '@angular/core';
+import { Movie } from './movie.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MovieService {
 
+  movie:Movie;
+
   constructor() { }
 
   moviesList = [
-    {title: 'The GodFather', year: '1972', director: 'Francis Ford Coppola'},
-    {title: 'Millers Crossing', year: '1990', director: 'The Coen Brothers'},
-    {title: 'Dial M for Murder', year: '1954', director: 'Alfred Hitchcock'},
-    {title: 'Whiplash', year: '2014', director: 'Damien Chazelle'},
-    {title: 'The Shape of Water', year: '2017', director: 'Guillermo del Toro'},
-    {title: 'Parasite', year: '2019', director: 'Bong Joon-Ho'},
-    {title: 'Jojo Rabbit', year: '2019', director: 'Taika Waititi'},
+    new Movie('The GodFather', '1972', 'Francis Ford Coppola'),
+    new Movie('Millers Crossing', '1990','The Coen Brothers'),
+    new Movie('Dial M for Murder', '1954', 'Alfred Hitchcock'),
+    new Movie('Whiplash', '2014', 'Damien Chazelle'),
+    new Movie('The Shape of Water', '2017', 'Guillermo del Toro'),
+    new Movie('Parasite', '2019', 'Bong Joon-Ho'),
+    new Movie('Jojo Rabbit', '2019', 'Taika Waititi')
   ];
 
   getMovies() {
-    return this.moviesList;
+    return this.moviesList.sort();  //sort has now been added to getMovies
   }
   addMovie(movietitle:string, moviedirector:string, movieyear:string) {
-    this.moviesList.push({title:movietitle, director:moviedirector, year:movieyear})
+    this.moviesList.push(new Movie(movietitle, movieyear, moviedirector));
   }
 }
