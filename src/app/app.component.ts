@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Movie } from './movie.model';
 //import { MovieService} from  './movie.service';
 
 @Component({
@@ -7,14 +8,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  //movies=[];
+
+  public mySelectedMovie: Movie;
+  setSelectedMovie(movie:Movie) {
+    this.mySelectedMovie = movie;
+  }
+
+
+ // movies=[];
 
   //constructor(private movieService: MovieService) {}
 
   //ngOnInit() {
-   // this.movies = this.movieService.getMovies();
-   // console.log(this.movies);
-  //}
+   //this.movies = this.movieService.getMovies();
+   //console.log(this.movies);
+ // }
 }
 
 
